@@ -26,10 +26,11 @@ public class Comparator_01_SortowanieLambda {
                  System.out.println("Po sortowaniu przez zarobki");
                 listDevs.forEach(e-> System.out.println(e));
                  
-                
+                // BEZ klasy COLLECTIONS oraz metod
                 System.out.println("SORTOWANIE LAMBDA PO WIEKU");
                 listDevs.sort((Developer o1, Developer o2)->o1.getAge()-o2.getAge()); 
                 listDevs.forEach((developer)->System.out.println(developer));
+                
                 System.out.println("SORTOWANIE LAMBDA PO NAZWIE");
                 listDevs.sort((Developer o1,Developer o2) -> o1.getNazwa().compareTo(o2.getNazwa()));
                 listDevs.forEach((developer)->System.out.println(developer));
