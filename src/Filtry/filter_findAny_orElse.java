@@ -3,7 +3,7 @@ package Filtry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-public class findAny_orElse {
+public class filter_findAny_orElse {
 
     public static void main(String[] args) {
      List<Person> persons = Arrays.asList(
