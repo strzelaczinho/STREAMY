@@ -1,25 +1,20 @@
 /*
-Convert List to another List using Stream map()
-In this example we will convert a List of an object into another List
-of different object using Stream.map() as an intermediate operation. 
+Konwersja Obiektow z jednej listy na Liste z Obiektami innego typu
  */
 package Konwersje_Kolekcji;
 
-import MAP.*;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 public class ListToAnotherList {
 	public static void main(String[] args) {
-		Person p1 = new Person(1, "Mohan", "student");
-		Person p2 = new Person(2, "Sohan", "teacher");
-		Person p3 = new Person(3, "Dinesh", "student");
+		Person p1 = new Person(1, "Jurek", "student");
+		Person p2 = new Person(2, "Marek", "teacher");
+		Person p3 = new Person(3, "Zdzisiek", "student");
 		List<Person> personList = Arrays.asList(p1, p2, p3);
 		
-		List<Student> stdList = personList.stream().filter(p -> p.getPersonType().equals("student"))
-			.map(p -> new Student(p.getId(), p.getName()))
-			.collect(Collectors.toList());
-		
+		List<Student> stdList = personList.stream().filter(p -> p.getPersonType().equals("student")).map(p -> new Student(p.getId(), p.getName())).collect(Collectors.toList());
 		stdList.forEach(e -> System.out.println("Id:"+ e.getId()+ ", Name: "+ e.getName()));
 	}
 }

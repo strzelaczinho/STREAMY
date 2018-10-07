@@ -4,7 +4,7 @@ Here we are providing the example of mapToInt() and in the same way we can do fo
  */
 package Konwersje_Kolekcji;
 
-import MAP.*;
+;
 import java.util.Arrays;
 import java.util.List;
 public class MapToIntDemo {

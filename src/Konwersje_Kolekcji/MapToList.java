@@ -15,7 +15,7 @@ We need to pass Function instance as lambda expression.
 * This is an intermediate operation.
 Convert Map to List using Stream map()
  */
-import MAP.*;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -29,8 +29,7 @@ public class MapToList {
 		map.put(30, "Narendra");
 		map.put(200, "Amit");
 		
-		List<User> list = map.entrySet().stream().sorted(Comparator.comparing(e -> e.getKey()))
-				.map(e -> new User(e.getKey(), e.getValue())).collect(Collectors.toList());
+		List<User> list = map.entrySet().stream().sorted(Comparator.comparing(e -> e.getKey())).map(e -> new User(e.getKey(), e.getValue())).collect(Collectors.toList());
 
 		list.forEach(l -> System.out.println("Id: "+ l.getId()+", Name: "+ l.getName()));		
 	}
