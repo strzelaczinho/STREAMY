@@ -15,17 +15,14 @@ public class filter_map_01_i_dodawanie {
                 new Persons("Marzena", 40)
         );
 
-        String name = persons.stream()                      // zamiana na stream
-                .filter(x -> "Jurek".equals(x.getName()))
+        String name = persons.stream().filter(x -> "Jurek".equals(x.getName()))
                 .map(Persons::getName)                        //convert stream to String
                 .findAny()
                 .orElse("Nie znalazlem");
 
         System.out.println("name : " + name);
         System.out.println("A teraz wszystkie obiekty ktore mają getName");
-        List<String> collect = persons.stream()
-                .map(Persons::getName)
-                .collect(Collectors.toList());
+        List<String> collect = persons.stream().map(Persons::getName).collect(Collectors.toList());
 
         collect.forEach(System.out::println);
         
