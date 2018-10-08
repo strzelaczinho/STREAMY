@@ -1,4 +1,4 @@
-package Filtry;
+package Filtry_operacje;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package Filtry;
+package Filtry_operacje;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,7 +46,7 @@ public class filter_findAny_orElse {
                     }
                     return false;
                 }).findAny()
-                .orElse(null);
+                .orElse(null);// mozna dac napis Stringa w przypadku gdy nie ma zamiast nulla
 
         System.out.println(result4);
         
