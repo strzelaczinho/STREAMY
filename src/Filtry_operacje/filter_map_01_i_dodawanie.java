@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
-public class filter_map {
+public class filter_map_01_i_dodawanie {
 
     public static void main(String[] args) {
 
