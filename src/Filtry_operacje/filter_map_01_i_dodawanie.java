@@ -22,7 +22,7 @@ public class filter_map_01_i_dodawanie {
 
         System.out.println("name : " + name);
         System.out.println("A teraz wszystkie obiekty ktore mają getName");
-        List<String> collect = persons.stream().map(Persons::getName).collect(Collectors.toList());
+        List<String> collect = persons.stream().map(Persons::getName).collect(Collectors.toList()); // lub map(p-> p.getName()).collect...
 
         collect.forEach(System.out::println);
         
