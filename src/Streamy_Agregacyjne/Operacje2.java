@@ -3,6 +3,7 @@ package Streamy_Agregacyjne;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Operacje2 {
     public static void main(String[] args) {
@@ -37,6 +38,8 @@ double average = listStudents.stream().mapToInt(s -> s.getScore()).average().get
 int wszystkieWyniki = listStudents.stream().mapToInt(p ->p.getScore()).sum();
 
 System.out.println("Average score: " + average+"  and sum of all Scores is "+wszystkieWyniki);
+
+
 /*
 An intermediate operation processes over a stream and return a new stream as a response. Then we can execute another intermediate operation on the new stream, and so on, and finally execute the terminal operation.
 One interesting point about intermediate operations is that they are lazily executed. That means they are not run until a terminal operation is executed.
@@ -72,6 +75,8 @@ listStudents.stream().sorted().parallel().filter(s -> s.getScore() >= 70).forEac
 //NOTE: Some operations can transform a stream of type A to a stream of type B, such as the map operation in the following example
 System.out.println();
 listStudents.stream().filter(s -> s.getScore() >= 70).map(s -> s.getName()).sorted().forEach(name -> System.out.println(name));
+
+
     }
 }
  class Student implements Comparable<Student> {

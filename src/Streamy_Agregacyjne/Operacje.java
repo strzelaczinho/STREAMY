@@ -65,9 +65,10 @@ System.out.println();
 listPersons.stream().sorted().limit(5).filter(p -> p.getAge() > 30).forEach(p-> System.out.print(p+" ")); // 5 older than 30 if they are five :)
 
 //6. The skip operation The skip() operation returns a stream containing the remaining elements after discarding the first n elements of the stream.Combining with the sorted and map operations, the following example finds the oldest age of the persons above:
-System.out.print("Skip czyli po sortowaniu  The oldest age: ");
+System.out.print("Skip czyli po sortowaniu  The oldest age =  ");
 listPersons.stream().sorted().map(p -> p.getAge()).skip(listPersons.size() - 1).forEach(System.out::println);
 
+listPersons.stream().filter(p->p.getAge() > 30).sorted().forEach(x->System.out.print(x+" "));
     }
     }
 enum Gender { MALE, FEMALE }
